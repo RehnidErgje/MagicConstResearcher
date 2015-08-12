@@ -1,0 +1,34 @@
+c:\users\rehni\documents\visual studio 2013\Projects\MagicConstResearcher\MagicConstResearcher\bin\Debug\MagicConstResearcher.exe.config
+c:\users\rehni\documents\visual studio 2013\Projects\MagicConstResearcher\MagicConstResearcher\obj\Debug\MagicConstResearcher.csprojResolveAssemblyReference.cache
+c:\users\rehni\documents\visual studio 2013\Projects\MagicConstResearcher\MagicConstResearcher\obj\Debug\MagicConstResearcher.Form1.resources
+c:\users\rehni\documents\visual studio 2013\Projects\MagicConstResearcher\MagicConstResearcher\obj\Debug\MagicConstResearcher.Properties.Resources.resources
+c:\users\rehni\documents\visual studio 2013\Projects\MagicConstResearcher\MagicConstResearcher\obj\Debug\MagicConstResearcher.csproj.GenerateResource.Cache
+c:\users\rehni\documents\visual studio 2013\Projects\MagicConstResearcher\MagicConstResearcher\bin\Debug\MagicConstResearcher.exe
+c:\users\rehni\documents\visual studio 2013\Projects\MagicConstResearcher\MagicConstResearcher\bin\Debug\MagicConstResearcher.pdb
+c:\users\rehni\documents\visual studio 2013\Projects\MagicConstResearcher\MagicConstResearcher\obj\Debug\MagicConstResearcher.exe
+c:\users\rehni\documents\visual studio 2013\Projects\MagicConstResearcher\MagicConstResearcher\obj\Debug\MagicConstResearcher.pdb
+D:\Documents\Study\Moroz\MagicConstResearcher\MagicConstResearcher\bin\Debug\MagicConstResearcher.exe.config
+D:\Documents\Study\Moroz\MagicConstResearcher\MagicConstResearcher\obj\Debug\MagicConstResearcher.exe
+D:\Documents\Study\Moroz\MagicConstResearcher\MagicConstResearcher\obj\Debug\MagicConstResearcher.pdb
+D:\Documents\Study\Moroz\MagicConstResearcher\MagicConstResearcher\bin\Debug\MagicConstResearcher.exe
+D:\Documents\Study\Moroz\MagicConstResearcher\MagicConstResearcher\bin\Debug\MagicConstResearcher.pdb
+D:\Documents\Study\Moroz\MagicConstResearcher\MagicConstResearcher\obj\Debug\MagicConstResearcher.csprojResolveAssemblyReference.cache
+D:\Documents\Study\Moroz\MagicConstResearcher\MagicConstResearcher\obj\Debug\MagicConstResearcher.Form1.resources
+D:\Documents\Study\Moroz\MagicConstResearcher\MagicConstResearcher\obj\Debug\MagicConstResearcher.Properties.Resources.resources
+D:\Documents\Study\Moroz\MagicConstResearcher\MagicConstResearcher\obj\Debug\MagicConstResearcher.csproj.GenerateResource.Cache
+D:\Documents\Study\Moroz\MagicConstResearcher\MagicConstResearcher\obj\Debug\MagicConstResearcher.maxResultBlok.resources
+D:\Documents\Study\Moroz\MagicConstResearcher\MagicConstResearcher\obj\Debug\MagicConstResearcher.ResearchPage.resources
+D:\Documents\Study\Moroz\MagicConstResearcher2\MagicConstResearcher\bin\Debug\MagicConstResearcher.exe.config
+D:\Documents\Study\Moroz\MagicConstResearcher2\MagicConstResearcher\obj\Debug\MagicConstResearcher.exe
+D:\Documents\Study\Moroz\MagicConstResearcher2\MagicConstResearcher\obj\Debug\MagicConstResearcher.pdb
+D:\Documents\Study\Moroz\MagicConstResearcher2\MagicConstResearcher\obj\Debug\MagicConstResearcher.csprojResolveAssemblyReference.cache
+D:\Documents\Study\Moroz\MagicConstResearcher2\MagicConstResearcher\obj\Debug\MagicConstResearcher.Form1.resources
+D:\Documents\Study\Moroz\MagicConstResearcher2\MagicConstResearcher\obj\Debug\MagicConstResearcher.maxResultBlok.resources
+D:\Documents\Study\Moroz\MagicConstResearcher2\MagicConstResearcher\obj\Debug\MagicConstResearcher.Properties.Resources.resources
+D:\Documents\Study\Moroz\MagicConstResearcher2\MagicConstResearcher\obj\Debug\MagicConstResearcher.ResearchPage.resources
+D:\Documents\Study\Moroz\MagicConstResearcher2\MagicConstResearcher\obj\Debug\MagicConstResearcher.csproj.GenerateResource.Cache
+D:\Documents\Study\Moroz\MagicConstResearcher2\MagicConstResearcher\bin\Debug\MagicConstResearcher.exe
+D:\Documents\Study\Moroz\MagicConstResearcher2\MagicConstResearcher\bin\Debug\MagicConstResearcher.pdb
+D:\Documents\Study\Moroz\MagicConstResearcher2\MagicConstResearcher\obj\Debug\MagicConstResearcher.Language.Eng.resources
+D:\Documents\Study\Moroz\MagicConstResearcher2\MagicConstResearcher\obj\Debug\Interop.ADODB.dll
+D:\Documents\Study\Moroz\MagicConstResearcher2\MagicConstResearcher\obj\Debug\MagicConstResearcher.csproj.ResolveComReference.cache
