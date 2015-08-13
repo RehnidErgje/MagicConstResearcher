@@ -45,6 +45,7 @@
             this.AddGraphButton = new System.Windows.Forms.Button();
             this.ControlPanel = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SaveName = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -53,6 +54,8 @@
             this.Property1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.ControlPanel.SuspendLayout();
@@ -91,7 +94,7 @@
             this.groupBox2.Size = new System.Drawing.Size(129, 78);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Межі";
+            this.groupBox2.Text = "Межі обчислення";
             // 
             // limitB
             // 
@@ -100,6 +103,7 @@
             this.limitB.Size = new System.Drawing.Size(84, 20);
             this.limitB.TabIndex = 4;
             this.limitB.Text = "4";
+            this.limitB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyDigitKeyPress);
             // 
             // label2
             // 
@@ -117,6 +121,7 @@
             this.limitA.Size = new System.Drawing.Size(84, 20);
             this.limitA.TabIndex = 2;
             this.limitA.Text = "0.125";
+            this.limitA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyDigitKeyPress);
             // 
             // comboBoxMethod
             // 
@@ -171,9 +176,12 @@
             this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl.TabIndex = 6;
             this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabControl.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.tabControl_ControlAdded);
+            this.tabControl.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.tabControl_ControlRemoved);
             // 
             // refreshResearchButton
             // 
+            this.refreshResearchButton.Enabled = false;
             this.refreshResearchButton.Location = new System.Drawing.Point(12, 157);
             this.refreshResearchButton.Name = "refreshResearchButton";
             this.refreshResearchButton.Size = new System.Drawing.Size(129, 29);
@@ -184,6 +192,7 @@
             // 
             // deleteResearchButton
             // 
+            this.deleteResearchButton.Enabled = false;
             this.deleteResearchButton.Location = new System.Drawing.Point(12, 192);
             this.deleteResearchButton.Name = "deleteResearchButton";
             this.deleteResearchButton.Size = new System.Drawing.Size(129, 29);
@@ -194,6 +203,7 @@
             // 
             // AddGraphButton
             // 
+            this.AddGraphButton.Enabled = false;
             this.AddGraphButton.Location = new System.Drawing.Point(12, 122);
             this.AddGraphButton.Name = "AddGraphButton";
             this.AddGraphButton.Size = new System.Drawing.Size(129, 29);
@@ -215,6 +225,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.SaveName);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.comboBox1);
@@ -229,14 +242,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Характеристики";
             // 
+            // SaveName
+            // 
+            this.SaveName.Location = new System.Drawing.Point(70, 313);
+            this.SaveName.Name = "SaveName";
+            this.SaveName.Size = new System.Drawing.Size(80, 20);
+            this.SaveName.TabIndex = 7;
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(82, 339);
+            this.button2.Location = new System.Drawing.Point(88, 284);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(65, 23);
+            this.button2.Size = new System.Drawing.Size(59, 23);
             this.button2.TabIndex = 6;
-            this.button2.Text = "Видалити";
+            this.button2.Text = "Load";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -244,16 +265,16 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(65, 23);
             this.button1.TabIndex = 5;
-            this.button1.Text = "Зберегти";
+            this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 312);
+            this.comboBox1.Location = new System.Drawing.Point(3, 286);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(141, 21);
+            this.comboBox1.Size = new System.Drawing.Size(80, 21);
             this.comboBox1.TabIndex = 4;
             // 
             // Property3
@@ -264,6 +285,7 @@
             this.Property3.Size = new System.Drawing.Size(147, 20);
             this.Property3.TabIndex = 3;
             this.Property3.Visible = false;
+            this.Property3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyDigitKeyPress);
             // 
             // Property2
             // 
@@ -273,6 +295,7 @@
             this.Property2.Size = new System.Drawing.Size(147, 20);
             this.Property2.TabIndex = 2;
             this.Property2.Visible = false;
+            this.Property2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyDigitKeyPress);
             // 
             // Property1
             // 
@@ -282,6 +305,7 @@
             this.Property1.Size = new System.Drawing.Size(147, 20);
             this.Property1.TabIndex = 1;
             this.Property1.Visible = false;
+            this.Property1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyDigitKeyPress);
             // 
             // panel1
             // 
@@ -305,6 +329,25 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(153, 227);
             this.panel2.TabIndex = 10;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(88, 339);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(59, 23);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Delete";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 316);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "New name";
             // 
             // Form1
             // 
@@ -359,6 +402,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.TextBox SaveName;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button3;
 
     }
 }

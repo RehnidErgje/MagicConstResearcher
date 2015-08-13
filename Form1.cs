@@ -15,6 +15,8 @@ namespace MagicConstResearcher
         private event GetProgress ProgressWatch;
         private Thread _workThread;
         private readonly Dictionary<int, AbstractResearcher> researchers;
+        private MethodPropertyDataHandler MethodPropertyDH;
+
         public Form1()
         {
             InitializeComponent();
@@ -32,7 +34,7 @@ namespace MagicConstResearcher
                                select current.Name;
             foreach (var researchname in researchlist)
                 comboBoxMethod.Items.Add(researchname);
-
+            MethodPropertyDH = new MethodPropertyDataHandler("MethodPropertyData.xml");
         }
 
         private void refreshResearch_Click(object sender, EventArgs e)
@@ -104,7 +106,7 @@ namespace MagicConstResearcher
 
         private void ResearchCreateThreadMethod(object input)
         {
-            int index =0;
+            int index = 0;
             Invoke(new MethodInvoker(() => { index = comboBoxMethod.SelectedIndex; }));
             Timer aTimer = new Timer();
             aTimer.Elapsed += TimerTick;
@@ -135,9 +137,9 @@ namespace MagicConstResearcher
             }
             ));
             aTimer.Enabled = false;
-            Invoke(new MethodInvoker(() =>{toolStripProgressBar1.Value = 100;}));
+            Invoke(new MethodInvoker(() => { toolStripProgressBar1.Value = 100; }));
             ProgressWatch -= researchers[index].GetResearchProgress;
-            
+
         }
         private void ResearchAddThreadMethod(object input)
         {
@@ -195,11 +197,117 @@ namespace MagicConstResearcher
                 Property3.Visible = true;
                 Property3.Text = temp.ToString();
             }
+            comboBox1.Items.Clear();
+            IEnumerable<string> loadProperty =
+                from element in MethodPropertyDH.PropertySetList
+                where element.Value.MethodName == comboBoxMethod.SelectedItem.ToString()
+                select element.Key;
+            foreach (string name in loadProperty)
+            {
+                comboBox1.Items.Add(name);
+            }
+            if (comboBox1.Items.Count > 0)
+                comboBox1.SelectedIndex = 0;
+            else
+            {
+                comboBox1.Text = "";
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (SaveName.Text == "")
+            {
+                MessageBox.Show("Enter Name");
+                SaveName.Select();
+                return;
+            }
+            MethodPropertyDH.AddPropertySet(SaveName.Text,
+                                            Property1.Text,
+                                            Property2.Text,
+                                            Property3.Text,
+                                            comboBoxMethod.SelectedItem.ToString());
+            comboBox1.Items.Clear();
+            IEnumerable<string> loadProperty =
+                from element in MethodPropertyDH.PropertySetList
+                where element.Value.MethodName == comboBoxMethod.SelectedItem.ToString()
+                select element.Key;
+            foreach (string name in loadProperty)
+            {
+                comboBox1.Items.Add(name);
+            }
+            comboBox1.SelectedIndex = 0;
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "")
+            {
+                MessageBox.Show("No save files");
+                return;
+            }
+            var temp = MethodPropertyDH.PropertySetList[comboBox1.SelectedItem.ToString()];
+            Property1.Text = temp.Property1;
+            Property2.Text = temp.Property2;
+            Property3.Text = temp.Property3;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (SaveName.Text == "")
+            {
+                MessageBox.Show("Enter Name");
+                SaveName.Select();
+                return;
+            }
+            MethodPropertyDH.DeletePropertySet(SaveName.Text);
+            comboBox1.Items.Clear();
+            IEnumerable<string> loadProperty =
+                from element in MethodPropertyDH.PropertySetList
+                where element.Value.MethodName == comboBoxMethod.SelectedItem.ToString()
+                select element.Key;
+            foreach (string name in loadProperty)
+            {
+                comboBox1.Items.Add(name);
+            }
+            if (comboBox1.Items.Count > 0)
+                comboBox1.SelectedIndex = 0;
+            else
+            {
+                comboBox1.Text = "";
+            }
+        }
+
+        private void tabControl_ControlAdded(object sender, ControlEventArgs e)
+        {
+                AddGraphButton.Enabled = true;
+                refreshResearchButton.Enabled = true;
+                deleteResearchButton.Enabled = true;
+        }
+
+        private void tabControl_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            if (tabControl.TabCount == 1)
+            {
+                AddGraphButton.Enabled = false;
+                refreshResearchButton.Enabled = false;
+                deleteResearchButton.Enabled = false;
+            }
+        }
+
+        private void OnlyDigitKeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

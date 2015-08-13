@@ -44,7 +44,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(169, 48);
+            this.label1.Location = new System.Drawing.Point(167, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(21, 13);
             this.label1.TabIndex = 19;
@@ -52,15 +52,16 @@
             // 
             // xN
             // 
-            this.xN.Location = new System.Drawing.Point(190, 45);
+            this.xN.Location = new System.Drawing.Point(188, 45);
             this.xN.Name = "xN";
+            this.xN.ReadOnly = true;
             this.xN.Size = new System.Drawing.Size(60, 20);
             this.xN.TabIndex = 18;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(169, 22);
+            this.label2.Location = new System.Drawing.Point(167, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(21, 13);
             this.label2.TabIndex = 17;
@@ -68,15 +69,16 @@
             // 
             // xP
             // 
-            this.xP.Location = new System.Drawing.Point(190, 19);
+            this.xP.Location = new System.Drawing.Point(188, 19);
             this.xP.Name = "xP";
+            this.xP.ReadOnly = true;
             this.xP.Size = new System.Drawing.Size(60, 20);
             this.xP.TabIndex = 16;
             // 
             // maxNLabel
             // 
             this.maxNLabel.AutoSize = true;
-            this.maxNLabel.Location = new System.Drawing.Point(8, 48);
+            this.maxNLabel.Location = new System.Drawing.Point(6, 48);
             this.maxNLabel.Name = "maxNLabel";
             this.maxNLabel.Size = new System.Drawing.Size(38, 13);
             this.maxNLabel.TabIndex = 15;
@@ -84,15 +86,16 @@
             // 
             // maxN
             // 
-            this.maxN.Location = new System.Drawing.Point(39, 45);
+            this.maxN.Location = new System.Drawing.Point(37, 45);
             this.maxN.Name = "maxN";
+            this.maxN.ReadOnly = true;
             this.maxN.Size = new System.Drawing.Size(124, 20);
             this.maxN.TabIndex = 14;
             // 
             // maxPLabel
             // 
             this.maxPLabel.AutoSize = true;
-            this.maxPLabel.Location = new System.Drawing.Point(8, 22);
+            this.maxPLabel.Location = new System.Drawing.Point(6, 22);
             this.maxPLabel.Name = "maxPLabel";
             this.maxPLabel.Size = new System.Drawing.Size(38, 13);
             this.maxPLabel.TabIndex = 13;
@@ -100,8 +103,9 @@
             // 
             // maxP
             // 
-            this.maxP.Location = new System.Drawing.Point(39, 19);
+            this.maxP.Location = new System.Drawing.Point(37, 19);
             this.maxP.Name = "maxP";
+            this.maxP.ReadOnly = true;
             this.maxP.Size = new System.Drawing.Size(124, 20);
             this.maxP.TabIndex = 12;
             // 
@@ -120,7 +124,7 @@
             this.Border.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Border.Location = new System.Drawing.Point(0, 0);
             this.Border.Name = "Border";
-            this.Border.Size = new System.Drawing.Size(269, 84);
+            this.Border.Size = new System.Drawing.Size(269, 73);
             this.Border.TabIndex = 20;
             this.Border.TabStop = false;
             this.Border.Text = "groupBox1";
@@ -142,7 +146,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.Border);
             this.Name = "maxResultBlok";
-            this.Size = new System.Drawing.Size(275, 84);
+            this.Size = new System.Drawing.Size(275, 73);
             this.Border.ResumeLayout(false);
             this.Border.PerformLayout();
             this.ResumeLayout(false);

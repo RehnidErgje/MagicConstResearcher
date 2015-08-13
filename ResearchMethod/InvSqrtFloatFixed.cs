@@ -53,7 +53,7 @@ namespace MagicConstResearcher.ResearchMethod
                     }
                     else
                     {
-                        double xt = 0.5 + 3627654 / 8388608;
+                        double xt = 0.5 + 3627654D / 8388608D;
                         if (xt > *(float*)&mx)
                             xx = 0.5f + (*(float*)&mx) / 2;
                         else

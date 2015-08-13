@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ListOfPropertySets>
+  <PropertySet Name="r1">
+    <Property1>2.0013085</Property1>
+    <Property2>2.000000835</Property2>
+    <Property3></Property3>
+    <Method>InvDivFloat</Method>
+  </PropertySet>
+  <PropertySet Name="r2">
+    <Property1>2.0013085</Property1>
+    <Property2>2.000000835</Property2>
+    <Property3></Property3>
+    <Method>InvDivFloat</Method>
+  </PropertySet>
+</ListOfPropertySets>

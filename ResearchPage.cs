@@ -195,9 +195,19 @@ namespace MagicConstResearcher
             object range = paragraph.Range;
             
             doc.InlineShapes.AddPicture(Path.GetFullPath(@"Result\" + pane.Title + ".png"), ref f, ref t, ref range);
-            doc.Save();
-            doc.Close();
-            app.Quit();
+            try
+            {
+                doc.Save();
+                doc.Close();
+            }
+            catch (Exception exception)
+            {
+
+            }
+            finally
+            {
+                app.Quit();
+            }  
         }
         private void Graph_MouseMove(object sender, MouseEventArgs e)
         {

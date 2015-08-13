@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<ListOfPropertySets>
+  <PropertySet name ="Title-1">
+    <Property1>50</Property1>
+    <Property2>50</Property2>
+    <Property3>50</Property3>
+    <MethodID>1</MethodID>
+  </PropertySet>
+  <PropertySet name ="Title-2">
+    <Property1>50</Property1>
+    <Property2>50</Property2>
+    <Property3>50</Property3>
+    <MethodID>1</MethodID>
+  </PropertySet>
+</ListOfPropertySets>
